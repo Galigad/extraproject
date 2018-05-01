@@ -35,8 +35,8 @@ public class MyLinkedListTest {
         Assert.assertEquals("429", result);
     }
 
-    @Test
-    public void testSearchExeption() {
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testSearchExeption() throws Exception {
         //Given
         MyLinkedList list = new MyLinkedList();
         for (int i = 0; i < 100; i++) {
@@ -45,7 +45,7 @@ public class MyLinkedListTest {
         //When
         String result = list.get(429);
         //Then
-        Assert.assertEquals("There is no such index",result);
+        fail();
     }
 
     @Test
@@ -58,7 +58,7 @@ public class MyLinkedListTest {
         //When
         Boolean result = list.delete("501");
         //Then
-        Assert.assertTrue("501", true);
+        Assert.assertTrue("message - udany test usuwania elementu", result);
 
     }
 }

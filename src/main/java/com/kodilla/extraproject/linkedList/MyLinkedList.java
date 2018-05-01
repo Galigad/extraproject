@@ -1,6 +1,6 @@
 package com.kodilla.extraproject.linkedList;
 
-public class MyLinkedList {
+public class MyLinkedList extends Exception {
 
     private Node firstElement;
     private int size;
@@ -43,13 +43,13 @@ public class MyLinkedList {
 
     public String get(int index) {
         Node element = firstElement;
-        try {
+        if (index > size) {
+            throw new IndexOutOfBoundsException();
+        } else {
             for (int i = 0; i < index; i++) {
                 element = element.getNext();
             }
             return element.getValue();
-        } catch (NullPointerException e) {
-            return "There is no such index";
         }
     }
 }

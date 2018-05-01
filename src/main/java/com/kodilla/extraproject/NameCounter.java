@@ -1,15 +1,11 @@
 package com.kodilla.extraproject;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-
-@SpringBootApplication
-public class ExtraProjectApplication {
+public class NameCounter {
 
     public static void main(String[] args) {
 
